@@ -1,0 +1,123 @@
+@import "../../../scss/mixins";
+
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-y: auto;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(26, 26, 26, 0.75);
+  animation: fadeInAnimation 200ms ease-out forwards;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.reserve-modal {
+  position: absolute;
+  top: 10%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  padding: 20px 30px 30px;
+  width: 893px;
+  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.35);
+  background-color: #fff;
+  animation: slideDownAnimation 300ms ease-out forwards;
+
+  &__title {
+    margin: 0 0 10px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 33px;
+    color: #333;
+  }
+
+  &__titleArrow {
+    display: none;
+  }
+
+  &__closeBtn {
+    position: absolute;
+    right: 15px;
+    top: 16px;
+    outline: none;
+    border: none;
+    width: 15px;
+    height: 15px;
+    background: transparent;
+    transition: fill 0.15s;
+    cursor: pointer;
+
+    svg {
+      fill: #a6a6a6;
+    }
+
+    &:hover svg {
+      fill: #333;
+      transition: fill 0.15s;
+    }
+  }
+
+  &:hover {
+    cursor: default;
+  }
+
+  &:last-child {
+    padding-bottom: 0;
+  }
+}
+
+@media (max-width: 1259px) {
+  .reserve-modal__title {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 992px) {
+  .modal {
+    height: auto;
+  }
+
+  .reserve-modal {
+    position: relative;
+    padding: 20px 15px;
+    max-width: 720px;
+    text-align: left;
+  }
+
+  .reserve-modal__title {
+    display: flex;
+    align-items: flex-start;
+    justify-content: left;
+    margin-bottom: 26px;
+    border-bottom: 1px solid #e6e6e6;
+    padding-bottom: 23px;
+    line-height: 27px;
+
+    span:nth-child(1) {
+      margin-right: 9px;
+      width: 15px;
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .reserve-modal {
+    transform: translateY(8%);
+  }
+}
+
+@media (max-width: 767px) {
+  .reserve-modal__titleArrow {
+    display: inline-block;
+  }
+}
+
+@include fadeInAnimation;
+@include slideDownAnimation;

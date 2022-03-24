@@ -1,0 +1,26 @@
+.payment {
+  &__input{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__warning {
+    color: var(--color-tundora);
+    margin-left: 30px;
+    background: transparent;
+  }
+
+  &__comment {
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--color-tundora);
+    display: inline-block;
+    margin-top: 10px;
+    padding: 5px 11px;
+    border-radius: 4px;
+    background-color: #f5f5f5;
+  }
+}
+
+

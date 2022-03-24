@@ -1,0 +1,67 @@
+@mixin desktop {
+  @media (min-width: (992px)) {
+    @content;
+  }
+}
+
+@mixin mini-desktop {
+  @media (max-width: (1259.9px)) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: (991.9px)) {
+    @content;
+  }
+}
+
+@mixin only-tablet {
+  @media (min-width: (768px)) and (max-width: (991.9px)) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: (767.9px)) {
+    @content;
+  }
+}
+
+@mixin high-mobile {
+  @media (min-width: (768px)) {
+    @content;
+  }
+}
+
+@mixin tablet-to-desktop {
+  @media (min-width: 992px) {
+    @content;
+  }
+}
+
+@mixin fadeInAnimation {
+  @keyframes fadeInAnimation {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+}
+
+@mixin slideDownAnimation {
+  @keyframes slideDownAnimation {
+    from {
+      opacity: 0;
+      transform: translateY(-3rem);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}

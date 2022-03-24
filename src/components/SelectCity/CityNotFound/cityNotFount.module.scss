@@ -1,0 +1,20 @@
+.city-notfound {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 160px;
+  padding-bottom: 160px;
+  height: 100%;
+
+  .city-notfound__caption {
+    margin-bottom: var(--indent-10);
+    font: var(--middle-bold);
+    color: var(--color-dark);
+  }
+
+  .city-notfound__descr {
+    font: var(--middle-normal);
+    color: var(--color-tundora);
+  }
+}

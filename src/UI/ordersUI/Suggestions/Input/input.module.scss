@@ -1,0 +1,131 @@
+.InputGroup {
+  position: relative;
+  //max-width: 390px;
+  .Input {
+    font-size: 14px;
+    line-height: 20px;
+    color: #333;
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    height: 52px;
+    padding: 10px 42px 2px 16px;
+    cursor: pointer;
+    transition: border 0.3s ease-in;
+    border: 1px solid #e6e6e6;
+    border-radius: 4px;
+    outline: none;
+
+    &:focus ~ .Label {
+      font-size: 12px;
+      top: 11px;
+    }
+        
+    &:hover,
+    &:focus {
+      border: 1px solid var(--color-primary);
+    }
+        
+    &:disabled {
+      cursor: not-allowed;
+      background-color: transparent;
+        
+      //&:not([type='codeSms']) ~ .InputClearBtn {
+      //    //TODO Change icons format to svg
+      //    background: url(locked.png) no-repeat;
+      //    width: 19px;
+      //    height: 19px;
+      //}
+    }
+    
+        
+  }
+    
+  .Label {
+    font-size: 14px;
+    line-height: 20px;
+    color: #808080;
+    position: absolute;
+    top: 50%;
+    left: 16px;
+    display: inline-block;      
+    transition: 0.3s ease-in;
+    transform: translateY(-50%);
+    pointer-events: none;
+
+    span:nth-child( 2 ) {
+      color: #8dc63f;
+      margin-left: 10px;
+    }
+
+  }
+
+  .InputClearBtn {
+    position: absolute;
+    top: 50%;
+    right: 17px;
+    width: 12px;
+    height: 12px;
+    cursor: pointer;
+    transform: translateY(-50%);
+    border: none;
+    outline: none;
+    background: url(clear.svg) no-repeat;
+  }
+
+  .Valid {
+    width: 19px;
+    height: 19px;
+    //TODO Change icons format to svg
+    background: url(success.png) no-repeat;
+  }
+    
+  .Locked {
+    width: 19px;
+    height: 19px;
+    cursor: not-allowed;
+    //TODO Change icons format to svg
+    background: url(locked.png) no-repeat;
+  }
+    
+  .Shrink {
+    font-size: 12px;
+    top: 11px;
+  }
+    
+  .PostAddress {
+    background: #f6f6f6!important;
+        
+  }
+
+  input[name='codeSms'],
+  input[name='floor'] {
+    max-width: 180px;
+    padding-left: 17px;
+    border: 1px solid var(--color-light);
+    border-radius: 4px;
+        
+    &:disabled {
+      cursor: not-allowed;
+      background-color: transparent;
+    }
+
+    &:focus {
+      border: 1px solid var(--color-primary);
+    }
+  }
+
+  /*** hide arrows of input type number ***/
+  //input::-webkit-outer-spin-button,
+  //input::-webkit-inner-spin-button {
+  //    -webkit-appearance: none;
+  //    margin: 0;
+  //}
+  //
+  //input[type=number] {
+  //    -moz-appearance: textfield;
+  //}
+}
+
+
+

@@ -1,0 +1,28 @@
+.opt-modal__orgs {
+  position: absolute;
+  left: 25px;
+  top: 134px;
+  border: 1px solid #e6e6e6;
+  border-radius: 4px;
+  width: 410px;
+  max-height: 289px;
+  background-color: #fff;
+}
+
+.orgs {
+  padding: 14px 0 14px 16px;
+}
+
+.orgs__items {
+  list-style: none;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+@media (max-width: 768px) {
+  .opt-modal__orgs {
+    left: 45px;
+    top: 166px;
+  }
+}

@@ -1,0 +1,110 @@
+@import "../../../scss/mixins";
+
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-y: auto;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(26, 26, 26, 0.75);
+  animation: fadeInAnimation 200ms ease-out forwards;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.story-modal {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  padding: 32px 40px 30px;
+  width: 100%;
+  max-width: 1020px;
+  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.35);
+  background-color: #fff;
+  animation: slideDownAnimation 300ms ease-out forwards;
+
+  &__wrapper {
+    position: absolute;
+    top: 72px;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    max-width: 1020px;
+
+    //&::after {
+    //  content: "";
+    //  position: absolute;
+    //  bottom: 354px;
+    //  width: 100%;
+    //  height: 1px;
+    //  background-color: #e6e6e6;
+    //}
+  }
+
+  &__space {
+    width: 100%;
+    height: 72px;
+    background-color: transparent;
+  }
+
+  &:hover {
+    cursor: default;
+  }
+}
+
+@media (max-width: 1259px) {
+  .story-modal {
+    padding: 28px 32px 22px;
+
+    //&__space {
+    //  height: 62px;
+    //}
+
+    &__wrapper {
+      top: 62px;
+      width: 100%;
+      max-width: 954px;
+
+      &::after {
+        bottom: 346px;
+      }
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .story-modal {
+    &__wrapper {
+      //top: 134px;
+      width: 100%;
+      max-width: 690px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .story-modal {
+    padding: 28px 15px 5px;
+
+    &__wrapper {
+      top: 0;
+
+      &::after {
+        bottom: 250px;
+      }
+    }
+
+    &__space {
+      display: none;
+    }
+  }
+}
+
+@include fadeInAnimation;
+@include slideDownAnimation;

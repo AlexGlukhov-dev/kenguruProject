@@ -1,0 +1,41 @@
+.reserve-table {
+  border-collapse: collapse;
+  width: 100%;
+  height: 100%;
+
+  td {
+    width: auto;
+  }
+
+  thead {
+    border-bottom: 1px solid #ececec;
+  }
+
+  thead tr td {
+    padding: 10px 0;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    color: #808080;
+
+    &:not(:last-child) {
+      padding-right: 60px;
+    }
+  }
+}
+
+.reserve-cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  span {
+    margin-left: 4px;
+  }
+}
+
+@media (max-width: 767px) {
+  .reserve-table {
+    display: none;
+  }
+}

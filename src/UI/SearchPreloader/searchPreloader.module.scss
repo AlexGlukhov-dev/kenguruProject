@@ -1,0 +1,46 @@
+.opt-modal-preloader {
+  position: absolute;
+  left: 0;
+  bottom: -34px;
+  z-index: 10000;
+  border: 1px solid #e6e6e6;
+  border-radius: 4px;
+  padding: 0;
+  width: 410px;
+  height: 50px;
+  background-color: #fff;
+
+  &__content {
+    padding: 14px 15px 16px;
+    width: 100%;
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--color-text-dark);
+  }
+
+  &__progress-bar {
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 0;
+    height: 3px;
+    background-color: #f7941e;
+    animation: bar 10s infinite;
+  }
+}
+
+@keyframes bar {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .opt-modal-preloader {
+    left: 20px;
+  }
+}

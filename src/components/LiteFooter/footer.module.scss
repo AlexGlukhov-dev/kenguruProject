@@ -1,0 +1,37 @@
+@import "../../scss/mixins";
+
+.footer {
+  margin-top: var(--indent-20);
+  padding: 29px 0;
+
+  &__container {
+    align-items: center;
+  }
+
+  &__copyright {
+    grid-column: 9 span;
+    font: var(--small-normal);
+    color: var(--color-gray);
+
+    @include tablet {
+      max-width: 350px;
+    }
+  }
+
+  &__payment {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    grid-column: 3 span;
+  }
+
+  &__payment img {
+    &:not(:last-child) {
+      margin-right: 5px;
+    }
+  }
+
+  &--basket {
+    background-color: #f6f6f6;
+  }
+}

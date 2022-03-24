@@ -1,0 +1,95 @@
+.contacts {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 32px;
+  background: var(--color-white);
+  gap: 16px;
+}
+
+.contacts-phone {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  background: var(--color-white);
+  gap: 30px;
+}
+
+.personal-info__name,
+.personal-info__infoEmail{
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  width: 100%;
+}
+
+.personal-info__status {
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--color-gray);
+  margin-bottom: 0;
+  margin-left: 25px;
+}
+
+.check {
+  margin-right: 10px;
+}
+
+.ulContent {
+  max-width: 50%;
+}
+
+.SmsButton {
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 20px;
+  width: 180px;
+  padding: 15px 22px;
+  box-shadow: inset 0px -3px 0px #dedede;
+  border: 1px solid var(--color-silver-2);
+  border-radius: 4px;
+  background: #f5f5f5;
+  transition: color .5s ease-in;
+  
+  &:disabled {
+    pointer-events: none;
+  }
+  
+  &:hover {
+    color: #f7941e;
+    transition: color .15s ease-in;
+  }
+}
+
+.send-SMS {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.personal-info,
+.consignee-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.input-sms {
+  width: 180px;
+}
+
+@media ( max-width: 1257px ) {
+  .SmsButton {
+    width: 153px;
+    padding: 14px;
+  }
+  
+  .input-sms {
+    width: 134px;
+  }
+}

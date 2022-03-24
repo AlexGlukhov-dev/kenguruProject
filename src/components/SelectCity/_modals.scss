@@ -1,0 +1,789 @@
+@import "../../scss/mixins";
+
+// change lib styles
+.modal {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 1000;
+  overflow-x: hidden;
+  overflow-y: auto;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+  cursor: pointer;
+}
+
+.modal::before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+
+  @include tablet {
+    display: none;
+  }
+}
+
+.ent-modal {
+  @include tablet {
+    background-color: #fff !important;
+
+    &::before {
+      display: inline-block !important;
+    }
+  }
+
+  @include mobile {
+    background-color: rgba(26, 26, 26, 0.75) !important;
+
+    &::before {
+      display: none !important;
+    }
+  }
+}
+
+.modal__container {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 50px auto;
+  border-radius: 10px;
+  padding: 20px;
+  width: 1000px;
+  text-align: left;
+  background-color: #fff;
+  cursor: default;
+
+  @include mobile {
+    border-radius: 0 !important;
+  }
+}
+
+.modal__close {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  border: none;
+  padding: 0;
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+ // background-image: url("data:image/svg+xml,%3Csvg version='1.1' id='Capa_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 512.001 512.001' style='enable-background:new 0 0 512.001 512.001;' xml:space='preserve'%3E%3Cg%3E%3Cg%3E%3Cpath d='M284.286,256.002L506.143,34.144c7.811-7.811,7.811-20.475,0-28.285c-7.811-7.81-20.475-7.811-28.285,0L256,227.717 L34.143,5.859c-7.811-7.811-20.475-7.811-28.285,0c-7.81,7.811-7.811,20.475,0,28.285l221.857,221.857L5.858,477.859 c-7.811,7.811-7.811,20.475,0,28.285c3.905,3.905,9.024,5.857,14.143,5.857c5.119,0,10.237-1.952,14.143-5.857L256,284.287 l221.857,221.857c3.905,3.905,9.024,5.857,14.143,5.857s10.237-1.952,14.143-5.857c7.811-7.811,7.811-20.475,0-28.285 L284.286,256.002z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
+  cursor: pointer;
+
+  @include tablet {
+   // background-image: url("../../assets/images/close.svg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    svg {
+      display: none;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: -15px;
+      right: -15px;
+      top: -15px;
+      bottom: -15px;
+    }
+  }
+}
+
+.modal.is-open {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+.modal.cty-modal {
+  @include mobile {
+    transform: translateX(-100%);
+    transition: opacity 0.15s, visibility 0.15s, transform 0.15s;
+  }
+}
+
+.modal.cty-modal.is-open {
+  @include mobile {
+    transform: none;
+    transition: opacity 0.15s, visibility 0.15s, transform 0.15s;
+  }
+}
+
+.fade {
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.fade.animate-open {
+  opacity: 1;
+  transition: opacity 0.3s;
+}
+
+.modal {
+  z-index: 1100;
+
+  @include tablet {
+    z-index: 3000;
+  }
+}
+
+.modal__close {
+  right: 15px;
+  top: 15px;
+  width: 10px;
+  height: 10px;
+  color: var(--color-chalice);
+  background: none;
+  transition: var(--primary-trs);
+  transition-property: color;
+
+  svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    fill: currentColor;
+    object-fit: cover;
+  }
+
+  &:hover {
+    color: var(--color-dark);
+  }
+
+  @include tablet {
+    right: 39px;
+    top: 19px;
+    width: 14px;
+    height: 14px;
+    background-image: url("../../assets/images/close.svg") !important;
+    background-position: center !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+  }
+
+  @include mobile {
+    right: 15px;
+    top: 19px;
+    width: 14px;
+    height: 14px;
+  }
+}
+
+.modal {
+  background-color: rgba(26, 26, 26, 0.75);
+}
+
+.modal__container {
+  border-radius: var(--primary-radius);
+  padding: 0;
+  box-shadow: var(--shadow-primary);
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border: var(--dim-border);
+    border-radius: var(--primary-radius);
+    pointer-events: none;
+  }
+
+  @include mobile {
+    position: fixed;
+    left: 0;
+    top: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+// my styles
+.city-modal {
+  overflow: hidden;
+  width: 660px;
+  min-height: 645px;
+
+  &__wrapper {
+    @include mobile {
+      height: 100%;
+      transition: var(--primary-trs);
+      transition-property: transform;
+
+      &--active {
+        transform: translateX(-100%);
+        transition: var(--primary-trs);
+        transition-property: transform;
+      }
+    }
+  }
+
+  &__pretop {
+    border-bottom: 1px solid #ebebeb;
+    padding: 15px 39px;
+
+    @include tablet {
+      display: block !important;
+    }
+
+    @include mobile {
+      padding: 14px 15px;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    font: var(--high-bold);
+    color: var(--color-dark);
+
+    @include tablet {
+      display: block !important;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__top {
+    border-bottom: 1px solid #ebebeb;
+    padding: var(--indent-30);
+    padding-right: 0;
+    padding-bottom: 0;
+
+    @include tablet {
+      padding: 39px;
+      padding-right: 0;
+      padding-bottom: 0;
+      padding-top: 16px;
+    }
+
+    @include mobile {
+      border: none;
+      padding: 15px;
+      padding-top: 17px;
+      padding-right: 0;
+      padding-bottom: 0;
+    }
+  }
+
+  &__bottom {
+    &{
+      flex-grow: 1;
+
+      @include tablet {
+        //overflow-y: auto;
+        max-height: calc(100vh - 119px - 52px);
+      }
+    }
+
+  }
+
+  &__search {
+    padding-right: var(--indent-30);
+
+    @include tablet {
+      padding-right: 39px;
+    }
+
+    @include mobile {
+      padding-right: 15px;
+    }
+  }
+
+  @include tablet {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    max-height: var(--window-height);
+  }
+}
+
+.city-notfound {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 160px;
+  padding-bottom: 160px;
+  height: 100%;
+
+  &__caption {
+    margin-bottom: var(--indent-10);
+    font: var(--middle-bold);
+    color: var(--color-dark);
+  }
+
+  &__descr {
+    font: var(--middle-normal);
+    color: var(--color-tundora);
+
+    @include mobile {
+      text-align: center;
+    }
+  }
+
+  @include mobile {
+    margin: 0 auto;
+    border-top: 1px solid #e5e5e5;
+    padding: 79px 0;
+    width: calc(100% - 30px);
+  }
+}
+
+.city-obls {
+  @include mobile {
+    padding: 0 15px;
+  }
+}
+
+.city-obl {
+  padding: 0 var(--indent-30);
+  padding-top: 17px;
+  padding-bottom: 11px;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid #ebebeb;
+  }
+
+  &__back {
+    position: relative;
+    margin-right: 10px;
+    width: 15px;
+    height: 12px;
+    background-image: url("../../assets/images/mobile-left-arrow.svg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    @include tablet {
+      &::before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 150%;
+        height: 150%;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+
+  &__top {
+    @include mobile {
+      display: flex;
+      align-items: center;
+      margin-bottom: -1px;
+      border-bottom: 1px solid #e5e5e5;
+      padding: 15px;
+    }
+  }
+
+  &__caption-mobile {
+    font: var(--high-bold);
+    color: var(--color-dark);
+  }
+
+  &__caption {
+    margin-bottom: var(--indent-8);
+    font: var(--middle-bold);
+    color: var(--color-dark);
+  }
+
+  &__links {
+    display: flex;
+    flex-wrap: wrap;
+
+    @include mobile {
+      position: absolute;
+      left: 100%;
+      top: 0;
+      z-index: 50;
+      display: none;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      width: 100%;
+      height: 100%;
+      background-color: var(--color-white);
+
+      &--active {
+        display: flex;
+      }
+    }
+  }
+
+  &__wrap {
+    display: flex;
+    flex-wrap: wrap;
+
+    @include mobile {
+      flex-wrap: nowrap;
+      flex-direction: column;
+      overflow-x: hidden;
+      overflow-y: auto;
+      padding: 0 15px;
+      height: calc(var(--window-height) - var(--bottom-block-size));
+    }
+  }
+
+  &__link {
+    margin-bottom: var(--indent-8);
+    font: var(--middle-normal);
+    color: var(--color-tundora);
+    transition: var(--primary-trs);
+    transition-property: color;
+
+    &:not(:last-child) {
+      margin-right: var(--indent-24);
+    }
+
+    &:hover {
+      color: var(--color-primary);
+    }
+
+    @include mobile {
+      margin: 0;
+      border-bottom: 1px solid #e5e5e5;
+      padding: 15px 0;
+      width: 100%;
+    }
+  }
+
+  @include tablet {
+    padding-left: 39px;
+    padding-right: 39px;
+  }
+
+  @include mobile {
+    padding: 15px 0;
+    padding-right: 0;
+    padding-left: 0;
+
+    &:first-child {
+      border-top: 1px solid #ebebeb;
+    }
+
+    &:last-child {
+      border-bottom: 1px solid #ebebeb;
+    }
+  }
+}
+
+.city-obl > .city-obl__caption {
+  @include mobile {
+    margin: 0;
+    width: 100%;
+    font-weight: 400;
+    background-image: url("../../assets/images/mobile-angle-right.svg");
+    background-position: right center;
+    background-repeat: no-repeat;
+  }
+}
+
+.entering-modal {
+  margin-top: 46px;
+  padding: 17px 25px;
+  padding-bottom: 22px;
+  width: 252px;
+  width: 256px;
+  vertical-align: top;
+
+  &__top {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: none;
+    align-items: center;
+    border-bottom: 1px solid #e6e6e6;
+    padding: 15px;
+    width: 100%;
+    height: var(--high-block-size);
+
+    @include mobile {
+      display: flex;
+    }
+  }
+
+  &__back {
+    width: 24px;
+    height: 24px;
+    background-image: url("../../assets/images/back-mob.svg");
+    background-position: center;
+    background-size: 15px 12px;
+    background-repeat: no-repeat;
+  }
+
+  .modal__close {
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &__step {
+    display: none;
+
+    &--current {
+      display: block;
+    }
+  }
+
+  &__change {
+    font: var(--middle-normal);
+    color: var(--color-primary);
+    transition: var(--primary-trs);
+    transition-property: color;
+
+    &:hover {
+      color: var(--color-primary-hover);
+    }
+  }
+
+  &__phone {
+    display: block;
+
+    @include mobile {
+      font-weight: 700;
+    }
+  }
+
+  &__error {
+    display: none;
+    margin-bottom: 5px;
+    font: var(--small-normal);
+    color: var(--color-error);
+  }
+
+  &__smserror {
+    display: none;
+    margin-bottom: 5px;
+    font: var(--small-normal);
+    color: var(--color-gray);
+  }
+
+  &__numbers {
+    display: grid;
+    grid-template-columns: repeat(4, 40px);
+    gap: 0 12px;
+
+    .entering-modal__input {
+      margin-bottom: var(--indent-8);
+      width: 100%;
+
+      @include mobile {
+        margin-bottom: 6px;
+      }
+    }
+
+    input {
+      padding: 0;
+      font: var(--middle-bold);
+      text-align: center;
+      color: var(--color-dark);
+
+      @include mobile {
+        height: 52px;
+        font-size: 16px;
+      }
+    }
+
+    .mini-input__field--highlight {
+      border-color: var(--color-success);
+    }
+
+    @include mobile {
+      grid-template-columns: repeat(4, 52px);
+      gap: 0 26px;
+    }
+  }
+
+  &__seconds {
+    margin-bottom: 5px;
+    font: var(--small-normal);
+    color: var(--color-gray);
+
+    span {
+      color: var(--color-primary);
+    }
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: var(--indent-8);
+    font: var(--middle-high-bold);
+    color: var(--color-dark);
+
+    @include mobile {
+      padding-right: 30px;
+      font: var(--high-bold);
+      line-height: 24px;
+    }
+  }
+
+  &__descr {
+    margin: 0;
+    margin-bottom: 15px;
+    font: var(--middle-normal);
+    color: var(--color-tundora);
+
+    @include mobile {
+      margin-bottom: 21px;
+      line-height: 22px;
+    }
+  }
+
+  &__form {
+    padding-right: 2px;
+
+    @include mobile {
+      display: flex;
+      flex-direction: column;
+      padding-right: 0;
+    }
+  }
+
+  &__bottom {
+    @include mobile {
+      position: fixed;
+      left: 0;
+      bottom: var(--bottom-block-size);
+      display: flex;
+      flex-direction: column-reverse;
+    }
+
+    @media (max-height: 490px) {
+      position: static;
+      margin-left: -15px;
+      width: calc(100% + 30px);
+    }
+  }
+
+  &__input {
+    margin-bottom: 14px;
+    width: 100%;
+  }
+
+  &__wrap {
+    @include mobile {
+      padding: 12px 15px;
+    }
+  }
+
+  &__btn {
+    margin-bottom: 14px;
+    width: 100%;
+    height: 40px;
+
+    @include mobile {
+      margin-bottom: 0;
+    }
+  }
+
+  &__prim {
+    font: var(--very-small);
+    text-align: center;
+    color: var(--color-tundora);
+
+    a {
+      color: var(--color-primary);
+      transition: var(--primary-trs);
+      transition-property: color;
+
+      &:hover {
+        color: var(--color-primary-hover);
+      }
+    }
+
+    @include mobile {
+      padding: 0 12px;
+    }
+  }
+
+  &__smsprim {
+    font: 400 var(--small-fz) / 18px var(--font-family);
+    text-align: center;
+    color: var(--color-gray);
+
+    @include mobile {
+      padding: 0 30px;
+    }
+  }
+
+  @include tablet {
+    vertical-align: middle;
+
+    .modal__close {
+      width: 10px;
+      height: 10px;
+      right: 15px !important;
+    }
+  }
+
+  @include mobile {
+    position: fixed;
+    left: 0;
+    top: 0;
+    overflow-y: auto;
+    margin: 0;
+    padding: 15px;
+    padding-top: calc(var(--high-block-size) + 87px);
+    padding-bottom: var(--bottom-block-size);
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.for-mobile {
+  display: none;
+
+  @media (max-width: 991.9px) {
+    & {
+      display: none;
+    }
+  }
+}
+
+.select-city-modal-close__btn {
+  right: 12px;
+  top: 16px;
+
+  @media (max-width: 991.9px) {
+    right: 39px;
+    top: 19px;
+  }
+
+  @media (max-width: 767.9px) {
+    right: 15px;
+    top: 19px;
+  }
+}
+
+.modal-layout {
+  opacity: 0;
+  animation: showInLayout 0.2s ease-out;
+
+  @keyframes showInLayout {
+    0% {
+      opacity: 0;
+    }
+
+    1% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+}

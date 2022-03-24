@@ -1,0 +1,150 @@
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.time-picker {
+  color: #53565a;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  max-width: 171px;
+  height: 52px;
+  margin: 0 auto;
+  user-select: none;
+  border: 1px solid #e6e6e6;
+  border-radius: 4px;
+  //box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.time-picker .hour,
+.time-picker .minute {
+  text-align: center;
+  position: relative;
+  display: flex;
+  justify-content: stretch;
+  align-items: stretch;
+  min-width: 60px;
+  height: 100%;
+}
+
+.time-picker .hour .hr,
+.time-picker .minute .min {
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  display: block;
+  width: 100%;
+  border: none;
+  outline: none;
+  background: none;
+  appearance: none;
+  -moz-appearance: textfield;
+}
+
+.time-picker .hour .hr {
+  padding-left: 24px;
+}
+
+.time-picker .minute .min {
+  padding-right: 24px;
+}
+
+.time-picker .hour .hr-up,
+.time-picker .hour .hr-down,
+.time-picker .minute .min-up,
+.time-picker .minute .min-down {
+  position: absolute;
+  display: grid;
+  place-content: center;
+  padding: 14px 12px;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  outline: none;
+  fill: #bfbfbf;
+  transition: fill 0.3s ease-in;
+  
+  &:hover {
+    fill: var(--color-dark);
+  }
+}
+
+.time-picker .hour .hr-up,
+.time-picker .hour .hr-down {
+  left: 0;
+  border-right: 1px solid #E6E6E6;
+}
+
+.time-picker .hour .hr-up,
+.time-picker .minute .min-up{
+  top: 0;
+}
+
+.time-picker .hour .hr-down,
+.time-picker .minute .min-down {
+ bottom: 0;
+}
+
+.time-picker .minute .min-down,
+.time-picker .minute .min-up{
+  right: 0;
+  border-left: 1px solid #E6E6E6;
+}
+
+.time-picker .separator {
+  display: grid;
+  place-content: center;
+  font-size: 30px;
+  color: var(--color-silver-2);
+  transform: translateY(-3px);
+}
+
+.time-selector__btn {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 13px 16px 18px;
+  color: var(--color-gray);
+  font-size: 14px;
+  line-height: 20px;
+  cursor: pointer;
+  user-select: none;
+  width: 171px;
+  border: 1px solid #E6E6E6;
+  background: var(--color-white);
+  border-radius: 4px;
+  z-index: 10;
+  transition: border 0.3s ease-in;
+  
+  &:hover {
+    border: 1px solid var(--color-primary);
+  }
+}
+
+.time-selector-active {
+  border: 1px solid var(--color-primary) !important;
+}
+
+.time-selector__btn-shrink {
+  padding-top: 6px;
+  padding-bottom: 8px;
+}
+
+.time-selector__btn-shrink-text {
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.time-selector-chevron-up {
+  transform: translateY(2px);
+}
+
+.time-selector-chevron-down {
+  transform: translateY(2px);
+}

@@ -1,0 +1,85 @@
+.storie-article {
+  &__title-main {
+    margin-top: 0;
+    margin-bottom: 28px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+    color: #333;
+  }
+
+  &__player-wrapper {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 40px;
+    padding-top: 30px;
+    padding-bottom: 56.25%;
+    height: 0;
+
+    iframe,
+    object,
+    embed {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__show-more {
+    position: relative;
+    margin-bottom: 12px;
+    padding-top: 24px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 26px;
+    color: #333;
+  }
+}
+
+@media (max-width: 1259px) {
+  .storie-article {
+    &__title-main {
+      margin-bottom: 20px;
+      font-size: 18px;
+      line-height: 28px;
+    }
+
+    &__player-wrapper {
+      margin-bottom: 32px;
+    }
+
+    &__show-more {
+      margin-bottom: 12px;
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .storie-article {
+    &__title-main {
+      margin-bottom: 20px;
+      font-size: 18px;
+      line-height: 28px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .storie-article {
+    &__title-main {
+      margin-bottom: 37px;
+      font-size: 16px;
+      line-height: 26px;
+    }
+
+    &__player-wrapper {
+      margin-bottom: 37px;
+    }
+
+    &__show-more {
+      padding-top: 16px;
+    }
+  }
+}

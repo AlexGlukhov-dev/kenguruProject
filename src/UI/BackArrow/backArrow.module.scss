@@ -1,0 +1,45 @@
+@import "../../scss/mixins";
+
+.container {
+  align-items: center;
+  margin: 0 auto;
+  padding: 0 15px;
+  max-width: var(--container-max-width);
+
+  .back {
+    display: inline-flex;
+    align-items: center;
+    font: var(--middle-normal);
+    color: var(--color-gray);
+    transition: var(--primary-trs);
+    transition-property: color;
+
+    svg {
+      margin-right: 7px;
+      width: 10px;
+      height: 8px;
+      fill: currentColor;
+    }
+
+    &:hover {
+      color: var(--color-primary);
+    }
+
+    @include tablet {
+      margin-top: 8px;
+    }
+  }
+
+  @include mini-desktop {
+    padding: 0 8px;
+  }
+
+  @include tablet {
+    padding: 0 39px;
+  }
+
+  @include mobile {
+    padding: 0 15px;
+    max-width: var(--container-max-width);
+  }
+}

@@ -1,0 +1,68 @@
+.payment {
+  max-width: 390px;
+}
+
+.payment-card,
+.payment-cash{
+  margin-bottom: 16px;
+  padding: 21px;
+  border: 1px solid var(--color-light);
+  border-radius: 4px;
+}
+
+.payment-cash {
+  padding-bottom: 13px;
+}
+
+.change {
+  display: flex;
+  align-items: center;
+}
+
+.available-cards,
+.change-text {
+  font-size: 14px;
+  line-height: 20px;
+  color: #808080;
+  margin-bottom: 0;
+  padding: 0 0 0 25px;
+  background-color: transparent;
+}
+
+.change-text,
+.change-currency {
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--color-gray);
+  margin-right: 8px;
+}
+
+.change-input {
+  width: 65px;
+  height: 34px;
+  margin-right: 7px;
+  padding: 7px;
+  border: 1px solid var(--color-light);
+  border-radius: 4px;
+  outline: none;
+}
+
+.payment-shop {
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 20px;
+  color: #333;
+  text-align: center;
+}
+
+@media ( max-width:  1259px ) {
+  .payment {
+    max-width: 298px;
+  }
+}
+
+@media ( max-width:  991px ) {
+  .payment {
+    max-width: 330px;
+  }
+}

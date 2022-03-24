@@ -1,0 +1,62 @@
+[
+  {
+    "name": "CDEK",
+    "code": "123",
+    "address": "ул. Громобоя, 16/50",
+    "samovivozPrice": 100,
+    "deliveryPrice": 200,
+    "schedule": "Пн-Пт с 8 до 21 Сб-Вс с 8 до 20",
+    "pickupPhone": "8 915 832 60 77",
+    "takeFrom": "2021/04/20"
+  },
+  {
+    "name": "Boxberry",
+    "code": "456",
+    "address": "ул. Велижская, 10",
+    "samovivozPrice": 200,
+    "deliveryPrice": 300,
+    "schedule": "Пн-Вс с 8 до 21",
+    "pickupPhone": "8 915 832 60 80",
+    "takeFrom": "2021/04/01"
+  },
+  {
+    "name": "CDEK",
+    "code": "7894",
+    "address": "ул. Лежневскя, 124",
+    "samovivozPrice": 300,
+    "deliveryPrice": 400,
+    "schedule": "Пн-Пт с 8 до 21 Сб-Вс с 8 до 20",
+    "pickupPhone": "8 915 832 60 90",
+    "takeFrom": "2021/03/27"
+  },
+  {
+    "name": "Boxberry",
+    "code": "1123",
+    "address": "ул. Громобоя, 16/50",
+    "samovivozPrice": 100,
+    "deliveryPrice": 500,
+    "schedule": "Пн-Пт с 8 до 21 Сб-Вс с 8 до 20",
+    "pickupPhone": "8 915 832 60 77",
+    "takeFrom": "2021/04/20"
+  },
+  {
+    "name": "CDEK",
+    "code": "1456",
+    "address": "ул. Велижская, 10",
+    "samovivozPrice": 200,
+    "deliveryPrice": 600,
+    "schedule": "Пн-Вс с 8 до 21",
+    "pickupPhone": "8 915 832 60 80",
+    "takeFrom": "2021/04/01"
+  },
+  {
+    "name": "Boxberry",
+    "code": "1789",
+    "address": "ул. Лежневскя, 124",
+    "samovivozPrice": 400,
+    "deliveryPrice": 700,
+    "schedule": "Пн-Пт с 8 до 21 Сб-Вс с 8 до 20",
+    "pickupPhone": "8 915 832 60 90",
+    "takeFrom": "2021/03/27"
+  }
+]

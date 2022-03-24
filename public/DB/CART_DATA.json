@@ -1,0 +1,10 @@
+[
+  {
+    "total_goods_amount": 5,
+    "total_weight": 100,
+    "total_volume": 30,
+    "total_sum": 1222,
+    "discount": 222,
+    "bonuses": 22
+  }
+]

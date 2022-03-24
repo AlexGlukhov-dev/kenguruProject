@@ -1,0 +1,100 @@
+.modal {
+  position: absolute;
+  top: 0;
+  z-index: 4000;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-white);
+  animation: showInModal 0.1s ease-out;
+
+  @keyframes showInModal {
+    0% {
+      left: 800px;
+    }
+
+    1% {
+      left: 800px;
+    }
+
+    100% {
+      left: 0;
+    }
+  }
+
+  &--hide {
+    animation: hideInModal 0.2s ease-out;
+
+    @keyframes hideInModal {
+      0% {
+        left: 0;
+      }
+
+      1% {
+        left: 0;
+      }
+
+      100% {
+        left: 800px;
+      }
+    }
+  }
+
+  &--top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: -1px;
+    border-bottom: 1px solid #e5e5e5;
+    padding: 15px;
+    width: 100%;
+  }
+
+  &--left {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  &--title {
+    font: var(--high-bold);
+    color: var(--color-dark);
+  }
+
+  &--cities-links {
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding: 0 15px;
+    height: calc(var(--window-height) - var(--bottom-block-size));
+  }
+
+  &--city-link {
+    margin: 0;
+    border-bottom: 1px solid #e5e5e5;
+    padding: 15px 0;
+    width: 100%;
+    font: var(--middle-normal);
+    color: var(--color-tundora);
+    transition: var(--primary-trs);
+    transition-property: color;
+  }
+
+  &--close {
+    fill: var(--color-chalice);
+
+    &::before {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+
+    &:hover {
+      fill: var(--color-dark);
+    }
+  }
+}

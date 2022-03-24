@@ -1,0 +1,125 @@
+
+.story-close__btn {
+  position: absolute;
+  right: 15px;
+  top: 9px;
+  outline: none;
+  border: none;
+  width: 10px;
+  height: 10px;
+  background: transparent;
+
+  svg {
+    fill: #a6a6a6;
+    transition: fill 0.15s;
+
+    &:hover {
+      fill: #333;
+      cursor: pointer;
+    }
+  }
+}
+
+.modal-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 55px;
+
+  &__btn {
+    outline: none;
+    border: none;
+    color: inherit;
+    background-color: transparent;
+
+    .top {
+      display: flex;
+      align-items: center;
+      margin-bottom: 7px;
+      font-weight: 700;
+      font-size: 14px;
+      color: #333;
+      transition: all 0.15s;
+
+      svg {
+        margin-right: 8px;
+        margin-left: 0;
+        fill: #333;
+        transition: all 0.15s;
+      }
+    }
+
+    &:hover {
+      text-decoration: inherit;
+      color: inherit;
+      cursor: pointer;
+
+      .top {
+        color: #f7941e;
+        transition: all 0.15s;
+      }
+
+      .top svg {
+        fill: #f7941e;
+        transition: all 0.15s;
+      }
+    }
+
+    &--next {
+      width: auto;
+
+      .top {
+        justify-content: flex-end;
+
+        svg {
+          margin-right: 0;
+          margin-left: 8px;
+        }
+      }
+    }
+  }
+}
+
+.storie-article__show-more {
+  position: relative;
+  margin-bottom: 12px;
+  padding-top: 25px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 26px;
+  color: #333;
+  
+  &::before {
+    content: "";
+    position: absolute;
+    top: 6px;
+    height: 1px;
+    width: 100%;
+    background-color: #e6e6e6;
+  }
+}
+
+//.storie-article__show-more::before {
+//  content: "";
+//  position: absolute;
+//  left: -38px;
+//  top: 0;
+//  width: 108.3%;
+//  height: 1px;
+//  background-color: #e6e6e6;
+//
+//  display: none;
+//}
+
+@media (max-width: 767px) {
+  .storie-article__show-more {
+    margin-bottom: 12px;
+    padding-top: 23px;
+  }
+}
+
+@media (max-width: 1259px) {
+  .storie-article__show-more {
+  
+  }
+  }

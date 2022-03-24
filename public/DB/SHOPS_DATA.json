@@ -1,0 +1,83 @@
+[
+  {
+    "code": "37_01",
+    "address": "ул. Куконковых, 104",
+    "samovivozPrice": "Бесплатно",
+    "deliveryPrice": 200,
+    "schedule": "Пн-Пт с 8 до 21 Сб-Вс с 8 до 20",
+    "shopPhone": "8 915 832 60 77",
+    "takeFrom": "2021/04/26"
+  },
+  {
+    "code": "37_02",
+    "address": "ул. Спартака, 22",
+    "samovivozPrice":  "Бесплатно",
+    "deliveryPrice": 300,
+    "schedule": "Пн-Вс с 8 до 21",
+    "shopPhone": "8 915 832 60 80",
+    "takeFrom": "2021/04/27"
+  },
+  {
+    "code": "37_03",
+    "address": "ул. Каравайковой, 101",
+    "samovivozPrice":  "Бесплатно",
+    "deliveryPrice": 400,
+    "schedule": "Пн-Пт с 8 до 21 Сб-Вс с 8 до 20",
+    "shopPhone": "8 915 832 60 90",
+    "takeFrom": "2021/03/28"
+  },
+  {
+    "code": "37_04",
+    "address": "ул. Ташкентская, 86Б (Студия Цвета)",
+    "samovivozPrice": "Бесплатно",
+    "deliveryPrice": 500,
+    "schedule": "Пн-Пт с 8 до 21 Сб-Вс с 8 до 20",
+    "shopPhone": "8 915 832 60 77",
+    "takeFrom": "2021/04/26"
+  },
+  {
+    "code": "37_05",
+    "address": "ул. Спартака, 22",
+    "samovivozPrice":  "Бесплатно",
+    "deliveryPrice": 600,
+    "schedule": "Пн-Вс с 8 до 21",
+    "shopPhone": "8 915 832 60 80",
+    "takeFrom": "2021/04/27"
+  },
+  {
+    "code": "37_06",
+    "address": "ул. Каравайковой, 101",
+    "samovivozPrice":  "Бесплатно",
+    "deliveryPrice": 700,
+    "schedule": "Пн-Пт с 8 до 21 Сб-Вс с 8 до 20",
+    "shopPhone": "8 915 832 60 90",
+    "takeFrom": "2021/03/28"
+  },
+  {
+    "code": "37_07",
+    "address": "ул. Куконковых, 104",
+    "samovivozPrice":  "Бесплатно",
+    "deliveryPrice": 800,
+    "schedule": "Пн-Пт с 8 до 21 Сб-Вс с 8 до 20",
+    "shopPhone": "8 915 832 60 77",
+    "takeFrom": "2021/04/26"
+  },
+  {
+    "code": "37_08",
+    "address": "ул. Спартака, 22",
+    "samovivozPrice":  "Бесплатно",
+    "deliveryPrice": 900,
+    "schedule": "Пн-Вс с 8 до 21",
+    "shopPhone": "8 915 832 60 80",
+    "takeFrom": "2021/04/27"
+  },
+  {
+    "code": "37_09",
+    "address": "ул. Каравайковой, 101",
+    "samovivozPrice":  "Бесплатно",
+    "deliveryPrice": 1000,
+    "schedule": "Пн-Пт с 8 до 21 Сб-Вс с 8 до 20",
+    "shopPhone": "8 915 832 60 90",
+    "takeFrom": "2021/03/28"
+  }
+]

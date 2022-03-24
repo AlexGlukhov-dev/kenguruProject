@@ -1,0 +1,147 @@
+.btn-reset {
+  outline: none;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.main-btn {
+  display: inline-block;
+  border-radius: 4px;
+  box-shadow: inset 0 -3px 0 #f28500;
+  background: #f7941e;
+}
+
+.reserve-btn {
+  margin-bottom: 3px;
+  padding: 8px 20px;
+  width: 194px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  color: #fff;
+  transition: 0.3s ease-in;
+
+  svg {
+    margin-right: 8px;
+  }
+
+  span {
+    text-align: center;
+  }
+
+  span:nth-child(1) {
+    line-height: 24px;
+  }
+
+  &:hover {
+    background-color: #f68819;
+    transition: 0.3s ease-in;
+  }
+}
+
+.reserve-btn__wrapper {
+  min-height: 80px;
+  text-align: center;
+
+  &:hover {
+    transition: all 0.3s ease-in;
+    cursor: pointer;
+
+    .reserve-text {
+      opacity: 1;
+      visibility: visible;
+      transition: all 0.3s ease-in;
+    }
+  }
+}
+
+.reserve-btn__text {
+  display: flex;
+  align-items: center;
+  line-height: 24px;
+  text-align: center;
+}
+
+.reserve-text {
+  margin-bottom: 7px;
+  min-height: 29px;
+  font-size: 12px;
+  line-height: 14.5px;
+  text-align: center;
+  color: #808080;
+  opacity: 0;
+  visibility: hidden;
+
+  // a {
+  //   text-decoration: none;
+  //   color: #f7941e;
+  // }
+}
+
+.reserve-table__row td {
+  display: table-cell;
+  vertical-align: top;
+  border-top: 1px solid #ececec;
+  padding-top: 10px;
+  min-width: 75px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: #4c4c4c;
+
+  &:not(:last-child) {
+    padding-bottom: 18px;
+  }
+
+  &:nth-child(1) {
+    padding-right: 20px;
+    width: 1400px !important;
+  }
+}
+
+.on-reserve {
+  margin-bottom: 6px;
+  //min-height: 29px;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+  color: #808080;
+  cursor: default;
+
+  a {
+    text-decoration: none;
+    color: #f7941e;
+  }
+}
+
+.reserve-cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  span {
+    margin-left: 4px;
+  }
+}
+
+.reserve-auth {
+  outline: none;
+  border: none;
+  color: #f7941e;
+  background: none;
+  transition: 0.15s ease-in-out;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+
+    // border-bottom: 1px solid #f7941e;
+  }
+}
+
+@media (max-width: 767px) {
+  .reserve-table__row td {
+    line-height: 18px;
+  }
+}

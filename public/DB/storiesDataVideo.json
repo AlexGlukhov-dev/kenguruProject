@@ -1,0 +1,107 @@
+[
+  {
+    "type": "video",
+    "title": "Плитка в ванной: как и чем клеить",
+    "body": "\"www.youtube.com/embed/Do4ZN-HTDQs?feature=oembed\"",
+    "slides": [
+      {
+        "id": "story-1",
+        "sectionid": "gkl",
+        "type": "article",
+        "title": "Название статьи-1",
+        "thumb": "https://kenguru.ru/upload/iblock/052/01ge7if0i91r8n5samva0d1pqhwykyol.jpg",
+        "viewed": false
+      },
+      {
+        "id": "video-1",
+        "sectionid": "gkl",
+        "type": "video",
+        "title": "Название video-1",
+        "thumb": "https://kenguru.ru/upload/iblock/605/n4scfnvhw5hiq773swbliactpnqdzwy9.jpg",
+        "viewed": true
+      },
+      {
+        "id": "story-2",
+        "sectionid": "gkl",
+        "type": "article",
+        "title": "Название статьи-2",
+        "thumb": "https://kenguru.ru/upload/iblock/9ec/2zijkznp3juvltkcn352275pswdkanss.jpg",
+        "viewed": false
+      },
+      {
+        "id": "video-2",
+        "sectionid": "gkl",
+        "type": "video",
+        "title": "Название video-2",
+        "thumb": "https://kenguru.ru/upload/iblock/a76/w4cd58nsfz6zrendou4su23lr6tuqcs1.jpg",
+        "viewed": false
+      },
+      {
+        "id": "story-3",
+        "sectionid": "gkl",
+        "type": "article",
+        "title": "Название статьи-1",
+        "thumb": "https://kenguru.ru/upload/iblock/acf/3o0t60wesd4zk5b7xh3yu33xdz4yuqr5.jpg",
+        "viewed": false
+
+      },
+      {
+        "id": "video-3",
+        "sectionid": "gkl",
+        "type": "video",
+        "title": "Название video-1",
+        "thumb": "https://kenguru.ru/upload/iblock/554/oumii1joisfzb6pxuddepkcuvc91nlij.jpg",
+        "viewed": false
+      },
+      {
+        "id": "story-4",
+        "sectionid": "gkl",
+        "type": "article",
+        "title": "Название статьи-2",
+        "thumb": "https://kenguru.ru/upload/iblock/109/nvyal0b1pcgrhuecdikmckwllfyig494.jpg",
+        "viewed": false
+      },
+      {
+        "id": "video-4",
+        "sectionid": "gkl",
+        "type": "video",
+        "title": "Название video-2",
+        "thumb": "https://kenguru.ru/upload/iblock/052/01ge7if0i91r8n5samva0d1pqhwykyol.jpg",
+        "viewed": false
+      },
+      {
+        "id": "story-5",
+        "sectionid": "gkl",
+        "type": "article",
+        "title": "Название статьи-1",
+        "thumb": "https://kenguru.ru/upload/iblock/f74/vzj3y9vi66bh2po3uqgw58otgz077dp5.jpg",
+        "viewed": false
+
+      },
+      {
+        "id": "video-5",
+        "sectionid": "gkl",
+        "type": "video",
+        "title": "Название video-1",
+        "thumb": "https://kenguru.ru/upload/iblock/052/01ge7if0i91r8n5samva0d1pqhwykyol.jpg",
+        "viewed": false
+      },
+      {
+        "id": "story-6",
+        "sectionid": "gkl",
+        "type": "article",
+        "title": "Название статьи-2",
+        "thumb": "https://kenguru.ru/upload/iblock/605/n4scfnvhw5hiq773swbliactpnqdzwy9.jpg",
+        "viewed": false
+      },
+      {
+        "id": "video-6",
+        "sectionid": "gkl",
+        "type": "video",
+        "title": "Название video-2",
+        "thumb": "https://kenguru.ru/upload/iblock/052/01ge7if0i91r8n5samva0d1pqhwykyol.jpg",
+        "viewed": false
+      }
+    ]
+  }
+]

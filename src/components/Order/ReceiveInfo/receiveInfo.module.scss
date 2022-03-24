@@ -1,0 +1,24 @@
+.receive-text {
+  font-size: 12px;
+  line-height: 18px;
+  color: #808080;
+  margin: 0;
+}
+
+.receive-date,
+.receive-time {
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 20px;
+  color: #333;
+  display: inline-block;
+  margin: 0;
+}
+
+.receive-date {
+  margin-right: 4px;
+}
+
+.receive-time {
+  font-size: 12px;
+}

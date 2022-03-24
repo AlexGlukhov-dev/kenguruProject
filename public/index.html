@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="Web site created using create-react-app" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <title>React Kenguru</title>
+	  <style>
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  /*/*overflow: auto;*/
+  /*margin: 0 auto;*/
+  /*padding: 20px;*/
+  /*max-width: 1200px;*/
+  margin: 0;
+  padding: 0;
+  font-family: "Noto Sans", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+}
+/*
+a{
+    text-decoration: none;
+}
+
+hr {
+  margin: 0;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 15px;
+  max-width: 1260px;
+}
+
+.btn-reset {
+  outline: none;
+  border: none;
+  background: transparent;
+}
+
+.info-text {
+  display: inline-block;
+  margin-right: 50px;
+  margin-left: 50px;
+}*/
+
+.product__btn {
+  outline: none;
+  border: none;
+  border-radius: 4px;
+  padding: 10px;
+  background-color: #f4971e;
+  cursor: pointer;
+}
+
+#opt-section {
+  padding-right: 15px;
+  color: #993200;
+  cursor: pointer;
+}
+
+.otp-section__btn--exit {
+  border: none;
+  border-radius: 4px;
+  padding: 0 8px;
+  width: 211px;
+  height: 24px;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 24px;
+  color: #fff;
+  background: #f7941e;
+  transition: background 0.1s ease-in;
+}
+
+.otp-section__btn--exit:hover {
+  background: #f68819;
+  cursor: pointer;
+}
+
+.story {
+  position: relative;
+  overflow: hidden;
+  margin: 10px 0 10px 100px;
+  border-radius: 4px;
+  padding: 10px 14px;
+  width: 127px;
+  height: 180px;
+  box-shadow: inset 0 -3px 0 rgba(0, 0, 0, 0.7);
+  background-image: url("DB/story-3.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #000;
+  transition: all 0.15s;
+  cursor: pointer;
+}
+
+.centered {
+  text-align: center;
+}
+
+.margin_b30 {
+  margin-bottom: 30px;
+}
+
+.advice-caption {
+  margin-top: 20px;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.1;
+  margin-block-end: 0.67em;
+  margin-block-start: 0.67em;
+}
+
+.storie-article__img-big {
+  margin: 10px 0;
+  height: auto;
+  max-width: 100%;
+}
+
+.storie-article__img-small {
+  height: auto;
+  max-width: 50%;
+}
+
+.storie-article .advice__block {
+  border-radius: 3px;
+  padding: 5px;
+  background-color: #fef7ef;
+}
+
+.storie-article .advice__block span {
+  font-weight: 700;
+  font-style: italic;
+  text-transform: uppercase;
+}
+
+.storie-article .item__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.storie-article .item-halfed {
+  max-width: 40%;
+}
+
+.storie-article p,
+.storie-article ul,
+.storie-article ol,
+.storie-article a {
+  font-size: 16px;
+  color: #333;
+}
+
+.storie__link {
+  font-size: inherit;
+  text-decoration: none !important;
+  color: #f7941e;
+}
+
+@media (max-width: 768px) {
+  .storie-article .item__wrapper {
+    justify-content: center;
+  }
+
+  .storie-article .item__wrapper p {
+    order: -1;
+  }
+
+  .storie-article .item-halfed {
+    max-width: 100%;
+  }
+
+  .storie-article__img-small {
+    margin-bottom: 10px;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+  }
+}
+
+/* оформление резерва */
+.on-shop-btn {
+  border-bottom: 1px dashed #808080;
+  font-weight: 400;
+  font-size: 14px;
+  text-decoration: none;
+  color: #808080;
+  transition: all 0.15s;
+  cursor: pointer;
+}
+
+.on-shop-btn:hover {
+  border-bottom: 1px dashed #f7941e;
+  color: #f7941e;
+}
+	  </style>
+	  
+  </head>
+  <body>
+
+   <!-- <noscript>You need to enable JavaScript to run this app.</noscript>
+    <p class="info-text ">"Товар добавлен в корзину"</p>
+    <button class="product__btn" data-xmlid="+337943"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><g><g><path fill="#fff" d="M13.863 2H4v4h8.915zm.633-2a1.5 1.5 0 0 1 1.454 1.864l-1.18 4.982A1.5 1.5 0 0 1 13.31 8H4v2h9.997a1 1 0 0 1 0 2H3.5A1.5 1.5 0 0 1 2 10.5V2h-1a1 1 0 0 1 0-2zM6 14.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm7.997 0a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/></g></g></svg></button>
+    <hr/>
+    <p class="info-text ">"Оптовый раздел"</p>
+    <button id="opt-section" class="btn-reset">оптовый раздел</button>
+    <button id="opt-section-close" class="otp-section__btn&#45;&#45;exit">Вернуться к розничным ценам</button>
+    <hr/>
+    <div class="container cards-container d-flex justify-content-center">
+	    <div class="row pt-5 pb-5">
+		    <p class="info-text ">"Stories"</p>
+		    <div class="col">
+			    <div class="story story-article" data-id="8222415" data-sectionid="1480">
+				    <h5>Storie</h5>
+			    </div>
+		    </div>
+	    </div>
+    </div>
+    <hr/>
+    <p class="info-text ">"Оформление резерва"</p>
+
+    <button class="btn-reset on-shop-btn" data-xmlid="393652">Наличие в 30 магазинах</button>
+    <div id="reserve_count_wrapper"></div>
+    <hr/> -->
+   <div class="site-container basket footer-bottom">
+      <div id="liteHeader"></div>
+      <div id="root"></div>
+      <div id="overlays"></div>
+      <div id="liteFooter"></div>
+   </div>
+  </body>
+</html>

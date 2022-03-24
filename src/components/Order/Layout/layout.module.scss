@@ -1,0 +1,18 @@
+.backToCartBtn {
+  color: #9b9b9b;
+  text-align: left;
+  position: relative;
+  margin-bottom: 15px;
+  padding-left: 20px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+	
+  &::before {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    content: '\1F814';
+    transform: translateY(-50%);
+  }
+}

@@ -1,0 +1,131 @@
+.order-placement__inner {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  //position: relative;
+  //position: absolute;
+  //top: 10%;
+  //padding: 10px 14px;
+  //width: 893px;
+  background-color: var(--color-white);
+  
+  
+  //&:last-child {
+  //padding-bottom: 0;
+  //}
+  //
+  &:hover {
+    cursor: default;
+  }
+}
+
+.order-placement__info {
+  display: flex;
+  flex-direction: column;
+  min-width: 392px;
+  height: 100%;
+  //overflow: auto;
+  &-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+    padding-bottom: 13px;
+    border-bottom: 1px solid var(--color-light);
+  }
+  
+  //button:last-child {
+  //  max-width: 242px;
+  //  margin-bottom: 16px;
+  //  padding: 10px 28px;
+  //}
+}
+
+.order-placement__items {
+  overflow: hidden;
+  flex: 1 1 auto;
+  margin-bottom: 16px;
+  padding: 10px 0 10px 14px;
+  //border-bottom: 1px solid var(--color-light);
+}
+
+.order-placement__map {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  //background-image: url("../../../assets/images/map.jpg");
+  //background-size: cover;
+  //background-position: right center;
+}
+
+.order-placement__close-btn {
+  position: absolute;
+  z-index: 10;
+  top: 16px;
+  right: 15px;
+  display: grid;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  cursor: pointer;
+  transition: fill 0.15s;
+  border: none;
+  border-radius: 50%;
+  outline: none;
+  background: #fff;
+  place-content: center;
+  
+  &:hover svg {
+    transition: fill 0.15s;
+    fill: var(--color-dark);
+  }
+  
+  svg {
+    fill: var(--color-light);
+  }
+}
+
+.order-placement__title {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 24px;
+  color: var(--color-dark);
+  margin: 0;
+  padding: 0;
+}
+
+.order-placement__content {
+  width: 100%;
+  height: 100%;
+}
+
+.order-placement__back-btn {
+  width: 24px;
+  height: 24px;
+  margin-right: 6px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+.order-placement__back-arrow {
+  width: 100%;
+  height: 100%;
+}
+
+.order-placement__info-footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 14px;
+  border-top: 1px solid var(--color-light);
+  
+  p {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.submit-pickup-btn {
+  min-width: 242px;
+  padding: 10px 20px;
+}

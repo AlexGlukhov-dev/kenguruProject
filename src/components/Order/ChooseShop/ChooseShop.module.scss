@@ -1,0 +1,140 @@
+.order-placement__inner {
+  display: flex;
+  width: 100vw;
+  height: 100%;
+  background-color: var(--color-white);
+  //position: relative;
+  //position: absolute;
+  //top: 10%;
+  //padding: 10px 14px;
+  //width: 893px;
+  //&:last-child {
+	  //padding-bottom: 0;
+  //}
+  //
+  &:hover {
+    cursor: default;
+  }
+}
+
+.order-placement__info {
+  display: flex;
+  overflow: auto;
+  flex: 0 0 392px;
+  flex-direction: column;
+  //min-width: 392px;
+  height: 100%;
+
+  &-header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 24px;
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--color-light);
+  }
+
+  .submitBtn {
+    //max-width: 242px;
+    
+  }
+}
+
+.order-placement__items {
+  flex: 1 1 auto;
+  //border-bottom: 1px solid var(--color-light);
+  margin-bottom: 16px;
+  padding: 10px 0 10px 14px;
+  //overflow: hidden;
+  //overflow-x: hidden;
+  //overflow-y: auto;
+}
+
+.order-placement__map {
+  position: relative;
+  overflow-x: hidden;
+  width: 100%;
+  height: 100%;
+  //background-image: url("../../../assets/images/map.jpg");
+  //background-size: cover;
+  //background-position: right center;
+}
+
+.order-placement__close-btn {
+  position: absolute;
+  z-index: 10;
+  top: 16px;
+  right: 15px;
+  display: grid;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  cursor: pointer;
+  transition: fill 0.15s;
+  border: none;
+  border-radius: 50%;
+  outline: none;
+  background: #fff;
+  place-content: center;
+
+  svg {
+    fill: var(--color-light);
+  }
+  
+  &:hover svg {
+    fill: var(--color-dark);
+    transition: fill 0.15s;
+  }
+}
+
+.order-placement__title {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 24px;
+  color: var(--color-dark);
+  margin: 0;
+  padding: 0;
+}
+
+.order-placement__content {
+  width: 100%;
+  height: 100%;
+}
+
+.order-placement__back-btn {
+  width: 24px;
+  height: 24px;
+  margin-right: 77px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+.order-placement__back-arrow {
+  width: 100%;
+  height: 100%;
+}
+
+.order-placement__info-footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 14px;
+  border-top: 1px solid var(--color-light);
+  
+  p {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.submit-shop-btn {
+  min-width: 242px;
+  padding: 10px 20px;
+}
+
+.delivery__btn {
+  width: 100%;
+  max-width: 242px;
+  margin-right: 16px;
+}

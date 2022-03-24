@@ -1,0 +1,36 @@
+.BtnLink {
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 20px;
+  text-decoration: none;
+  display: inline-block;
+  padding: 9px 19px;
+  border: none;
+  border-radius: 4px;
+  outline: none;
+  background-color: transparent;
+  
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  &:hover:disabled {
+    color: var(--color-dark);
+    opacity: 0.5;
+  }
+}
+
+
+.BtnLinkSecondary {
+  color: var(--color-dark);
+  box-shadow: 0px -3px 0px 0px #dedede inset;
+  transition: color 0.3s ease-in-out;
+  border: 1px solid var(--color-silver-2);
+  background-color: var(--color-alabaster1);
+  
+  &:hover {
+    color: var(--color-primary);
+    transition: color 0.3s ease-in-out;
+  }
+}

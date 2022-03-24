@@ -1,0 +1,29 @@
+.container {
+  max-width: 1260px;
+  margin: 0 auto;
+  padding: 15px;
+}
+
+.wrapper {
+  display: grid;
+  grid-template: minmax(90px, auto) 1fr minmax(90px, auto) / 1fr;
+  min-height: 100vh;
+}
+
+.content-inner {
+  //display: grid;
+  //grid-template: 1fr / 1fr 1fr;
+  //grid-gap: 30px;
+  display: flex;
+  justify-content: space-between;
+  gap: 28px;
+}
+
+.order-left {
+  min-width: 816px;
+}
+
+.order-right {
+  //display: grid;
+  //place-content: center;
+}

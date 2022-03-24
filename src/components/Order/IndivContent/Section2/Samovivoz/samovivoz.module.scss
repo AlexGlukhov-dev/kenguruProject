@@ -1,0 +1,46 @@
+.RecieveSection {
+  font-size: 14px;
+  line-height: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  padding: 21px;
+  border: 1px solid var(--color-light);
+  border-radius: 4px;
+  
+  &:not( :last-child ) {
+    margin-bottom: 16px;
+  }
+  
+  .BtnSecondary {
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 20px;
+    color: var(--color-dark);
+    padding: 10px;
+    box-shadow: 0px -3px 0px 0px #dedede inset;
+    border: 1px solid var(--color-silver-2);
+    border-radius: 4px;
+    outline: none;
+    background-color: var(--color-alabaster1);
+  }
+}
+
+.RecieveSectionInner {
+  p {
+    color: var(--color-dark);
+    margin-left: 28px;
+  }
+  
+  .Delivery {
+    color: var(--color-gray);
+  }
+  
+  .DeliveryDay {
+    color: var(--color-tundora);
+    padding: 5px 11px;
+    background-color: #f6f6f6;
+  }
+}
+

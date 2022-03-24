@@ -1,0 +1,49 @@
+.city-tags {
+  padding: var(--indent-14) 0;
+
+  &__slider {
+    overflow: hidden;
+    width: 100%;
+  }
+
+  &__wrapper {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    box-sizing: content-box;
+    transition-property: transform;
+  }
+
+  &__item {
+    flex-shrink: 0;
+    margin-right: var(--indent-8);
+  }
+
+  .simplebar-content {
+    display: flex;
+    align-items: center;
+  }
+
+  @media (max-width: (767.9px)) {
+    padding: 16px 0;
+  }
+}
+
+.tag {
+  display: inline-block;
+  border-radius: var(--primary-radius);
+  padding: 5px 10px !important;
+  width: auto;
+  font: var(--middle-normal);
+  color: var(--color-tundora);
+  background-color: var(--color-willsand);
+  transition: var(--primary-trs);
+  transition-property: background-color;
+  cursor: pointer;
+
+  &:hover {
+    background-color: var(--color-alto);
+  }
+}

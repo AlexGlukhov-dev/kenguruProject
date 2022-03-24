@@ -1,0 +1,105 @@
+@import "../../../scss/mixins";
+
+.field {
+  position: relative;
+  width: 100%;
+
+  &__input {
+    -webkit-appearance: none !important;
+    outline: none;
+    border: var(--input-border);
+    border-radius: var(--primary-radius);
+    padding-right: 48px;
+    padding-left: var(--indent-14);
+    width: 100%;
+    height: 40px;
+    box-shadow: none;
+    font: var(--middle-normal);
+    color: var(--color-dark);
+    background-color: var(--color-white);
+    transition: var(--primary-trs);
+    transition-property: box-shadow, border, color;
+
+    &::placeholder {
+      font: var(--middle-normal);
+      color: var(--color-chalice);
+      transition: var(--primary-trs);
+      transition-property: box-shadow, border, color;
+    }
+
+    &:focus,
+    &:hover {
+      border: 1px solid var(--color-primary);
+    }
+
+    &:focus {
+      &::placeholder {
+        color: #bfbfbf;
+      }
+    }
+
+    &:focus + .field__btn svg {
+      opacity: 1;
+    }
+
+    @include tablet {
+      font-size: 16px;
+    }
+  }
+
+  &__btn {
+    position: absolute;
+    right: 17px;
+    top: 50%;
+    border: none;
+    width: 17px;
+    height: 17px;
+    background-color: transparent;
+    transform: translateY(-50%);
+    cursor: pointer;
+    pointer-events: none;
+
+    svg {
+      display: block;
+      width: 100%;
+      height: 100%;
+      fill: var(--color-dark);
+      opacity: 0.35;
+      transition: var(--primary-trs);
+      transition-property: opacity;
+    }
+  }
+
+  &__clear {
+    right: 19px;
+    z-index: 10;
+    width: 12px;
+    height: 12px;
+    transition: var(--primary-trs);
+    transition-property: opacity, visibility;
+    pointer-events: auto;
+
+    svg {
+      fill: var(--color-error);
+      opacity: 1;
+    }
+  }
+
+  &__loupe {
+    transition: var(--primary-trs);
+    transition-property: opacity, visibility;
+  }
+
+  &--texted {
+    .field__input {
+      color: #333 !important;
+    }
+  }
+}
+
+.btn-reset {
+  border: none;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+}
